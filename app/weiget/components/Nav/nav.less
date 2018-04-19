@@ -3,7 +3,7 @@
     background: #cacaca;
     flex-direction:column;
     display: flex;
-    transition: 0.5s;
+    transition:0.5s;
     max-width: 300px;
     h1{
         text-align: center;
@@ -14,10 +14,12 @@
             transition: 0.5s;
             border:1px solid #733636;
         }
+        flex-shrink:1;
     }
     ul{
         padding: 20px;
         flex-grow: 1;
+        flex-shrink:1;
         li{
             border-bottom: 1px solid black; 
             padding: 24px 0px 20px 0px;
@@ -32,18 +34,16 @@
         }
     }
     .footer{
-        height: 250px;
+
         padding: 0px 30px;
+        flex-shrink:1;
         .wechat{
-            width: 200px;
-            height: 200px;
             
             img{
                 width: 100%;
             }
         }
         .tell-me{
-            height: 50px;
             line-height: 50px;
             text-align: center;
             a{
@@ -71,5 +71,58 @@
             transition: 0.5s;
         }
     }
-    
+    ul{
+        padding: 20px;
+        flex-grow: 1;
+        flex-shrink:1;
+        li{
+            border-bottom: 1px solid black; 
+            padding: 14px 0px 10px 0px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &:hover{
+                color: red;
+            }
+            .anticon{
+                padding-right: 0px;
+                font-size: 20px;
+            }
+            span{
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+    }
+    .footer{
+        padding: 0px;
+        flex-shrink:1;
+        .wechat{
+            display: none;
+        }
+        .tell-me{
+            line-height: 50px;
+            text-align: center;
+            a{
+                color: rgb(116, 3, 3);
+                .anticon{
+                    padding-right: 0px;
+                    font-size: 20px;
+                }
+                &:hover{
+                    color: red;
+                }
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
 }
+@media (max-width: 768px) {
+    .navmin{
+        font-size: 12px;
+    }
+}
+

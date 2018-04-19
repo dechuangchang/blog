@@ -1,5 +1,6 @@
 import {NAVSHOW} from '../constants/index';
-const navOpen = (state = true, action = {}) => {
+
+const navOpen = (state = window.innerWidth >768 ? true : false, action = {}) => {
     // console.log(action)
     
     switch (action.type) {

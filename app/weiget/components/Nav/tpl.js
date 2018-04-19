@@ -11,23 +11,23 @@ export default function () {
             <ul>
                 <li>
                     <Icon type="user" />
-                    个人资料
+                    <span>个人资料</span>
                 </li>
                 <li>
                     <Icon type="code-o" />
-                    学习进度
+                    <span>学习进度</span>
                 </li>
                 <li>
                     <Icon type="edit" />
-                    随手笔记
+                    <span>随手笔记</span>
                 </li>
                 <li>
                     <Icon type="file-text" />
-                    个人简历
+                    <span>个人简历</span>
                 </li>
                 <li>
                     <Icon type="coffee" />
-                    来首音乐
+                    <span>来首音乐</span>
                 </li>
             </ul>
             <div className='footer'>
@@ -38,7 +38,7 @@ export default function () {
                     
                     <a target='_blank' href='https://github.com/dechuangchang'>
                         <Icon type="github" />
-                        GitHub
+                        <span>GitHub</span>
                     </a>
                 </div>
                
