@@ -1,0 +1,75 @@
+.nav{
+    flex: 0 0 260px;
+    background: #cacaca;
+    flex-direction:column;
+    display: flex;
+    transition: 0.5s;
+    max-width: 300px;
+    h1{
+        text-align: center;
+        padding-top: 20px;
+        .logo{
+            border-radius: 50%;
+            width: 100px;
+            transition: 0.5s;
+            border:1px solid #733636;
+        }
+    }
+    ul{
+        padding: 20px;
+        flex-grow: 1;
+        li{
+            border-bottom: 1px solid black; 
+            padding: 24px 0px 20px 0px;
+            cursor: pointer;
+            &:hover{
+                color: red;
+            }
+            .anticon{
+                padding-right: 16px;
+                font-size: 20px;
+            }
+        }
+    }
+    .footer{
+        height: 250px;
+        padding: 0px 30px;
+        .wechat{
+            width: 200px;
+            height: 200px;
+            
+            img{
+                width: 100%;
+            }
+        }
+        .tell-me{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            a{
+                color: rgb(116, 3, 3);
+                .anticon{
+                    padding-right: 16px;
+                    font-size: 20px;
+                }
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+}
+.navmin{
+    flex: 0 0 60px;
+    transition: 0.5s;
+    h1{
+        text-align: center;
+        padding-top: 20px;
+        .logo{
+            border-radius: 50%;
+            width: 40px;
+            transition: 0.5s;
+        }
+    }
+    
+}

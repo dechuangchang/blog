@@ -1,21 +1,11 @@
-import { IN, UN, GETUSER } from '../constants/index';
+import {NAVSHOW, GETUSER } from '../constants/index';
 
-export const oIN = (otype) => {
-    return dispatch => {
-        setTimeout(() => {
-            dispatch({
-                type: IN,
-                otype
-            })
-        }, 1000)
-    }
-}
-export const oUN = (otype) => {
+export const oNavShow = (otype) => {
     return {
-        type: UN,
-        otype
+        type:NAVSHOW
     }
 }
+
 
 export const getUser = () => {
     return {

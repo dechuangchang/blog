@@ -1,5 +1,4 @@
-export const IN = 'IN';
-export const UN = 'UN';
+export const NAVSHOW = 'NAVSHOW';
 
 //user
 export const GETUSER   = 'GETUSER';

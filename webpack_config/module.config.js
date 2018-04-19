@@ -55,7 +55,7 @@ const moduleConfigDev = {
 const moduleConfigProd = { 
     rules: [
         {
-            test: /^((?!iconfont).)*.css$/,
+            test: /\.css$/,
             use: ExtractTextPlugin.extract({
                 use: [{
                     loader: 'css-loader',
@@ -70,7 +70,7 @@ const moduleConfigProd = {
             })
         },
         {
-            test: /less\/(.*)\.less/,
+            test: /\.less/,
             use: ExtractTextPlugin.extract({
                 use: [{
                     loader: 'css-loader',
