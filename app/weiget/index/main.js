@@ -1,6 +1,11 @@
-import User from '../components/User/main';
+
 import Nav from '../components/Nav/main';
-import {HashRouter,Route} from 'react-router-dom'
+import User from '../components/User/main';
+import Resume from '../components/Resume/main';
+import Notes from '../components/Notes/main';
+import Learning from '../components/Learning/main';
+import Music from '../components/Music/main';
+import {HashRouter,Route} from 'react-router-dom';
 
 class App extends React.Component {
     constructor(props) {
@@ -15,8 +20,10 @@ class App extends React.Component {
                 <React.Fragment>
                     <Nav/>
                     <Route exact path="/" component={User} />
-                    {/* <Route path="/about" component={About} />
-                    <Route path="/inbox" component={Inbox} /> */}
+                    <Route path="/learning" component={Learning} />
+                    <Route path="/notes" component={Notes} />
+                    <Route path="/resume" component={Resume} />
+                    <Route path="/music" component={Music} /> 
                 </React.Fragment>
             </HashRouter>
             
