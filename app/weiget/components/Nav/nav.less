@@ -24,14 +24,17 @@
         li{
             border-bottom: 1px solid black; 
             padding: 24px 0px 20px 0px;
-            cursor: pointer;
-            &:hover{
-                color: red;
+            a{
+                color: black;
+                &:hover{
+                    color: red;
+                }
+                .anticon{
+                    padding-right: 16px;
+                    font-size: 20px;
+                }
             }
-            .anticon{
-                padding-right: 16px;
-                font-size: 20px;
-            }
+            
         }
     }
     .footer{
@@ -79,20 +82,22 @@
         li{
             border-bottom: 1px solid black; 
             padding: 14px 0px 10px 0px;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            &:hover{
-                color: red;
-            }
-            .anticon{
-                padding-right: 0px;
-                font-size: 20px;
-            }
-            span{
-                text-align: center;
-                padding-top: 10px;
+            a{
+               
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &:hover{
+                    color: red;
+                }
+                .anticon{
+                    padding-right: 0px;
+                    font-size: 20px;
+                }
+                span{
+                    text-align: center;
+                    padding-top: 10px;
+                }
             }
         }
     }

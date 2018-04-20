@@ -1,12 +1,18 @@
 import './user.less';
-import { Icon } from 'antd';
-export default function(){
-
-    let { oNavShow, navState } = this.props;
-    return (
-        <div className='user'>
-            <Icon onClick={oNavShow} type={navState ? 'swap-left' : 'swap-right'} />
-
-        </div>
-    )
+import Header from '../Header/main';
+class Tpl extends React.PureComponent{
+    constructor(props){
+        super(props)
+        
+    }
+    render(){
+        let {that} = this.props;
+        return(
+            <div className='user'>
+                <Header {...this.props} />
+                user
+            </div>
+        )
+    }
 }
+export default Tpl

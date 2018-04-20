@@ -1,12 +1,15 @@
 import './resume.less';
-import { Icon } from 'antd';
-export default function(){
 
-    let { oNavShow, navState } = this.props;
-    return (
-        <div className='user'>
-            <Icon onClick={oNavShow} type={navState ? 'swap-left' : 'swap-right'} />
-            Resume
-        </div>
-    )
+class Tpl extends React.PureComponent{
+    constructor(props){
+        super(props)
+        
+    }
+    render(){
+        let {that} = this.props;
+        return(
+            <span>resume</span>
+        )
+    }
 }
+export default Tpl
