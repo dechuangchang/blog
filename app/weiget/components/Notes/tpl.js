@@ -1,15 +1,9 @@
-import './notes.less';
+import ThatMain from '../../HOC/That';
 
-class Tpl extends React.PureComponent{
-    constructor(props){
-        super(props)
-        
-    }
-    render(){
-        let {that} = this.props;
-        return(
-            <span>notes</span>
-        )
-    }
-}
+const Tpl = ThatMain((that) => {
+    
+    return (
+        <span>notes</span>
+    )
+})
 export default Tpl

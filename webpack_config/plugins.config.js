@@ -15,12 +15,12 @@ const pluginsConfig = [
     new HtmlWebpackPlugin({
         filename:'index.html',
         template: './app/index.html',
-        chunks : ['vendor','index']
+        chunks : ['index','vendor']
     }),
     new HtmlWebpackPlugin({
         filename:'admin.html',
         template: './app/admin.html',
-        chunks : ['vendor','admin']
+        chunks : ['admin','vendor']
     }),
     new ExtractTextPlugin('./css/[name][hash].css'),
     new CopyWebpackPlugin([{

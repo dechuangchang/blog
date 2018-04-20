@@ -17,7 +17,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'output'),
         filename: apiConfig.outputFilename,
-        chunkFilename: './output/[name]-[id].[chunkhash:8].bundle.js'
+        chunkFilename: 'js/chunk/[name].js?v=[chunkHash]'
     },
     module: moduleConfig ,
     plugins: pluginsConfig,

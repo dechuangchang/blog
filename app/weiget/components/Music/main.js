@@ -8,7 +8,7 @@ class Music extends React.Component{
 
     }
     render(){
-        return Tpl.call(this)
+        return <Tpl that={this}/>
     }
 }
 export default Music

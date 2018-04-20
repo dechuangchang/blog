@@ -8,7 +8,7 @@ class Learning extends React.Component{
 
     }
     render(){
-        return Tpl.call(this)
+        return  <Tpl that ={this}/>
     }
 }
 export default Learning

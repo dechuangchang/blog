@@ -1,9 +1,11 @@
-import './nav.less';
+
 import { Icon, Divider } from 'antd';
 import { Link } from 'react-router-dom';
-export default function () {
-    console.log(this.props)
-    let { oNavShow, navState } = this.props;
+import ThatMain from '../../HOC/That';
+
+const Tpl = ThatMain((that) => {
+
+    let { oNavShow, navState } = that.props;
     return (
         <div className={navState ? 'nav' : 'nav navmin'}>
             <h1>
@@ -56,4 +58,5 @@ export default function () {
             </div>
         </div>
     )
-}
+})
+export default Tpl
