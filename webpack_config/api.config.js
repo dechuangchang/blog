@@ -11,7 +11,7 @@ if(process.env.npm_lifecycle_script.indexOf('development')>1){
 const apiConfig = {
     devtool: type == 'production' ? 'none':'source-map',
     entry: {
-        vendor: ['jquery','axios','react','react-dom'],
+        vendor: ['jquery','moment','axios','react','react-dom'],
         index: './app/js/index.js',
         admin: './app/js/admin.js'
         

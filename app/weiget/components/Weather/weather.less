@@ -1,0 +1,49 @@
+.weather{
+    // width: 400px;
+    border: 1px solid #c1b6b6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    border-radius: 3px;
+    box-shadow: inset 0px 1px 6px #aba2a2;
+    .title{
+        align-self:center;
+        padding: 10px;
+    }
+    .operating{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
+        .Search{
+            width: 300px;
+        }
+        .info{
+            align-self: center;
+            padding-left: 30px;
+        }
+    }
+    .ant-btn-primary{
+        background: black;
+        border-color: black;
+    }
+}
+@media (max-width: 768px) {
+    .weather{
+        padding: 10px;
+        .ant-card-head{
+            background: none;
+        }
+        .operating{
+            flex-direction: column;
+            .Search{
+                width: 100%;
+            }
+            .info{
+                align-self: center;
+                padding: 0px;
+                padding-top: 30px;
+            }
+        }
+    }
+}

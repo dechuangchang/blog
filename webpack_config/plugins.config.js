@@ -8,6 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pluginsConfig = [
     new webpack.ProvidePlugin({
         $:'jquery',
+        moment:'moment',
         axios:'axios',
         React:'react',
         ReactDom:'react-dom'

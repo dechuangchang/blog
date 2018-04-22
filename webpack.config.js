@@ -24,8 +24,8 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, './app/'), //服务器根路径
         proxy: {
-            '/api': {// '/api':匹配项
-                target: apiConfig.target,// 接口的域名
+            '/Heart': {// '/api':匹配项
+                target: 'http://tj.nineton.cn',// 接口的域名
                 changeOrigin: true,// 如果接口跨域，需要进行这个参数配置
             }
         },
