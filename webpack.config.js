@@ -24,11 +24,13 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, './app/'), //服务器根路径
         proxy: {
-            '/Heart': {// '/api':匹配项
-                target: 'http://tj.nineton.cn',// 接口的域名
+            '/api': {// '/api':匹配项
+                target: 'http://112.126.91.237',// 接口的域名
                 changeOrigin: true,// 如果接口跨域，需要进行这个参数配置
             }
         },
+        hot:false,
+        inline:false,
         disableHostCheck: apiConfig.disableHostCheck,
         host: apiConfig.host, //ip
         compress: true, // 服务端压缩

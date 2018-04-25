@@ -23,7 +23,10 @@ const pluginsConfig = [
         template: './app/admin.html',
         chunks : ['admin','vendor']
     }),
-    new ExtractTextPlugin('./css/[name][hash].css'),
+    new ExtractTextPlugin({
+        filename:'./css/[name][hash].css',
+        allChunks: true
+    }),
     new CopyWebpackPlugin([{
         from:path.resolve(__dirname,'../app/static'),
         to:path.resolve(__dirname,'../output/static')
