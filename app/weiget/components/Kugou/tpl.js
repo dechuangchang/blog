@@ -12,6 +12,8 @@ const Tpl = ThatMain((that) => {
                 onSearch={that.onSearch}
                 enterButton
             />
+
+
             <Collapse onChange={(e) => that.changeCollapse(e)} activeKey={that.state.activeKey} bordered={false}>
                 {
                     that.state.list.length ?
@@ -20,14 +22,7 @@ const Tpl = ThatMain((that) => {
                                 <Panel header={item.filename} key={index} >
                                     <p>歌曲名{item.songname}</p>
                                     <p>歌手{item.singername}</p>
-                                    {
-                                        that.state.url&&that.state.activeKey[0]==index?
-                                        <audio controls>
-                                            <source src={that.state.url} type="audio/mpeg" />
-                                            您的浏览器不支持 audio 元素。
-                                        </audio>
-                                        :null
-                                    }
+
                                 </Panel>
                             )
                         })

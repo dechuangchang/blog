@@ -5,6 +5,7 @@ class Music extends React.Component{
         super(props)
         this.state = {
             activeKey:[],
+            sound : new Audio(),
             data : {
                 keyword : null,  // 搜索关键字
                 page: 1,          // 第几页
@@ -25,7 +26,8 @@ class Music extends React.Component{
         let data = this.state.data;
         data.keyword = e ;
         this.setState({
-            data:data
+            data:data,
+            activeKey:[]
         },()=>{
             this.getList()
         })
@@ -58,9 +60,14 @@ class Music extends React.Component{
                 format:'jsonp'          // 写死
             },
             success:function(data){
-                console.log( data.url );
                 that.setState({
                     url: data.url
+                },()=>{
+                    
+                    //选择文件  
+                    that.state.sound.src = that.state.url;
+                    //播放  
+                    that.state.sound.play(); 
                 })
             },
             error:function(data){
@@ -69,12 +76,17 @@ class Music extends React.Component{
         });
     }
     changeCollapse=(e)=>{
-        console.log(e)
+        let activeKey = [];
+        activeKey.push(e.pop())
         this.setState({
-            activeKey:e[e.length-1]
+            activeKey:activeKey
         },()=>{
-            let hash = this.state.list[this.state.activeKey[0]].hash
-            this.getItem(hash)
+            let {list,activeKey} = this.state;
+            if(list.length){
+                let hash = list[activeKey].hash
+                this.getItem(hash)
+            }
+            
         })
     }
     render(){

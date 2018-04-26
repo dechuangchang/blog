@@ -16,8 +16,8 @@ const Learning = Loadable({
     loader: () => import('../components/Learning/main'),
     loading: Loading
 })
-const Music = Loadable({
-    loader: () => import('../components/Music/main'),
+const Kuwo = Loadable({
+    loader: () => import('../components/Kuwo/main'),
     loading: Loading
 })
 
@@ -37,7 +37,7 @@ class App extends React.Component {
                     <Route path="/learning" component={Learning} />
                     <Route path="/notes" component={Notes} />
                     <Route path="/resume" component={Resume} />
-                    <Route path="/music" component={Music} />
+                    <Route path="/kuwo" component={Kuwo} />
                 </React.Fragment>
             </HashRouter>
 

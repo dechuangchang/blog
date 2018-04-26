@@ -37,9 +37,9 @@ const Tpl = ThatMain((that) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={`music`}>
+                    <Link to={`kuwo`}>
                         <Icon type="coffee" />
-                        <span>来首音乐</span>
+                        <span>酷我电台</span>
                     </Link>
                 </li>
             </ul>
