@@ -2,9 +2,7 @@ import ThatMain from '../../HOC/That';
 import { Input, Spin, Table, Card } from 'antd';
 const Search = Input.Search;
 const Tpl = ThatMain((that) => {
-    // console.log(that.state.weather)
     let { city_name, future, last_update } = that.state.weather;
-    // console.log(city_name,future,last_update)
     return (
         <div className='weather'>
             <span className='title'>天气预报</span>

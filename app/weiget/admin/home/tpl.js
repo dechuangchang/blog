@@ -5,7 +5,6 @@ class Tpl extends React.PureComponent {
         super(props)
     }
     render() {
-        console.log(this.props,this.context)
         return (
             <React.Fragment>
                 <p>home</p>

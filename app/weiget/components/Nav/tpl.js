@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import ThatMain from '../../HOC/That';
 
 const Tpl = ThatMain((that) => {
-
-    let { oNavShow, navState } = that.props;
+    let { oNavShow, navState,location} = that.props;
     return (
         <div className={navState ? 'nav' : 'nav navmin'}>
             <h1>
@@ -13,31 +12,31 @@ const Tpl = ThatMain((that) => {
             </h1>
             <ul>
                 <li>
-                    <Link to={`/`}>
+                    <Link className={location.pathname=='/' ? 'active':null} to={`/`}>
                         <Icon type="user" />
                         <span>个人资料</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`/learning`}>
+                    <Link className={location.pathname=='/learning' ? 'active':null}  to={`/learning`}>
                         <Icon type="code-o" />
                         <span>学习进度</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`/notes`}>
+                    <Link className={location.pathname=='/notes' ? 'active':null}  to={`/notes`}>
                         <Icon type="edit" />
                         <span>随手笔记</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`/resume`}>
+                    <Link className={location.pathname=='/resume' ? 'active':null}  to={`/resume`}>
                         <Icon type="file-text" />
                         <span>个人简历</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`kuwo`}>
+                    <Link className={location.pathname=='/kuwo' ? 'active':null}  to={`kuwo`}>
                         <Icon type="coffee" />
                         <span>酷我电台</span>
                     </Link>

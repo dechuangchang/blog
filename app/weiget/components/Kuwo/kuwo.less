@@ -1,4 +1,33 @@
 .kuwo{
     max-height: 100vh;
-overflow: auto;
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    .list{
+        background-color: #cacaca82;
+        width: 200px;
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .title{
+            padding-top: 20px;
+            color: #8c8989;
+            font-size:20px; 
+            text-align: center;
+        }
+        .fm_list{
+            padding: 10px;
+            cursor: pointer;
+            li{
+                line-height: 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.712);
+            }
+            li:hover{
+                color: rgba(255, 0, 242, 0.445);
+            }
+            .active{
+                color: red;
+            }
+        }
+    }
 }

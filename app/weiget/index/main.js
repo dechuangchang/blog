@@ -32,7 +32,7 @@ class App extends React.Component {
         return (
             <HashRouter>
                 <React.Fragment>
-                    <Nav />
+                    <Route component={Nav} />
                     <Route exact path="/" component={User} />
                     <Route path="/learning" component={Learning} />
                     <Route path="/notes" component={Notes} />

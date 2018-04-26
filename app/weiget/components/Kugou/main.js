@@ -22,7 +22,6 @@ class Music extends React.Component{
         
     }
     onSearch=(e)=>{
-        console.log(e)
         let data = this.state.data;
         data.keyword = e ;
         this.setState({
@@ -50,7 +49,6 @@ class Music extends React.Component{
     }
     getItem=(hash)=>{
         let that = this;
-        console.log(hash)
         $.ajax({
             url:'http://m.kugou.com/app/i/getSongInfo.php',
             dataType:'jsonp',
