@@ -26,7 +26,7 @@ const Tpl = ThatMain((that) => {
                 <li>
                     <Link className={location.pathname=='/notes' ? 'active':null}  to={`/notes`}>
                         <Icon type="edit" />
-                        <span>随手笔记</span>
+                        <span>每日一文</span>
                     </Link>
                 </li>
                 <li>

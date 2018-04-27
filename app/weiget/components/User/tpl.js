@@ -7,7 +7,7 @@ const Tpl = ThatMain((that) => {
         <div className='user'>
             <Header />
             <div>
-                {/* <Weather /> */}
+                
                 user
             </div>
         </div>

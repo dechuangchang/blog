@@ -5,7 +5,7 @@ class User extends React.Component{
 
     }
     componentDidMount(){
-
+        
     }
     render(){
         return <Tpl that={this} />

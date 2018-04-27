@@ -1,6 +1,5 @@
 import App from '../weiget/index/main.js';
 import '../less/index.less';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 const store = configureStore();

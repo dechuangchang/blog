@@ -1,5 +1,5 @@
 import Tpl from './tpl';
-
+import { message } from 'antd';
 class Header extends React.Component {
     constructor(props) {
         super(props)
@@ -32,6 +32,9 @@ class Header extends React.Component {
                 "小明和小红的日常生活",
                 "爆笑录音室",
             ],
+            mp3List: [],
+            spinning: true,
+            musicrid: null,
             page: {
                 flag: 2,
                 listid: 5,
@@ -46,33 +49,58 @@ class Header extends React.Component {
     }
     getItem = () => {
         let that = this;
+        that.setState({
+            spinning: true
+        })
         $.ajax({
             url: 'http://album.kuwo.cn/album/servlet/commkdtpage',
             dataType: 'jsonp',
             data: that.state.page,
             success: function (data) {
-                console.log(data)
-                // that.setState({
-                //     url: data.url
-                // }, () => {
-
-                //     //选择文件  
-                //     that.state.sound.src = that.state.url;
-                //     //播放  
-                //     that.state.sound.play();
-                // })
+                that.setState({
+                    mp3List: data.musiclist,
+                    spinning: false
+                })
             },
             error: function (data) {
                 message.error('error');
+                that.setState({
+                    spinning: false
+                })
             }
         });
     }
-    getMp3 = (index)=>{
+    getMp3 = (index) => {
         let page = this.state.page;
-        page.listid = index+1;
+        page.listid = index + 1;
         this.setState({
-            page:page
+            page: page
+        }, () => {
+            this.getItem()
         })
+    }
+    onPaly = (musicrid) => {
+
+        let that = this;
+        console.log(musicrid)
+        that.setState({
+            musicrid: musicrid
+        }, () => {
+            $.ajax({
+                url: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_${that.state.musicrid}&format=mp3&response=url`,
+                dataType: 'jsonp',
+                success: function (data) {
+                    console.log(`data`)
+                },
+                error: function (data) {
+                    console.log(`data`)
+                    message.error('error');
+
+                },
+            });
+            
+        })
+
     }
     render() {
         return <Tpl that={this} />
