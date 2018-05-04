@@ -1,4 +1,7 @@
+```
 document.documentElement.style.width =  document.documentElement.getBoundingClientRect().width/16 + 'px';
+
+```
 ##   resize: both; 加上 overflow: auto; 
 ###  可以调整元素的大小 
 flex.html
