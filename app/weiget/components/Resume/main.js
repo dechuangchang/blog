@@ -4,17 +4,13 @@ class Resume extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            ff:2
+            data:[]
         }
     }
     componentDidMount(){
 
     }
-    oSd = ()=> {
-        this.setState({
-            ff:3
-        })
-    }
+    
     render(){
         return <Tpl that={this}/>
     }

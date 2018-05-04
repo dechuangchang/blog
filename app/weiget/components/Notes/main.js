@@ -8,8 +8,8 @@ class Notes extends React.Component{
         }
     }
     componentDidMount(){
-//
-    this.getText()
+        
+        this.getText()
     }
     getText = ()=>{
         let that = this;
