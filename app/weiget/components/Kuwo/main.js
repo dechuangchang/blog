@@ -82,7 +82,7 @@ class Header extends React.Component {
     onPaly = (musicrid) => {
 
         let that = this;
-        console.log(musicrid)
+        // console.log(musicrid)
         that.setState({
             musicrid: musicrid
         }, () => {
@@ -90,10 +90,10 @@ class Header extends React.Component {
                 url: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_${that.state.musicrid}&format=mp3&response=url`,
                 dataType: 'jsonp',
                 success: function (data) {
-                    console.log(`data`)
+                    // console.log(`data`)
                 },
                 error: function (data) {
-                    console.log(`data`)
+                    // console.log(`data`)
                     message.error('error');
 
                 },

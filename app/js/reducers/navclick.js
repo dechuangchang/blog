@@ -3,11 +3,11 @@ let arr = [];
 
 const navOpen = (
     state = {
-        item: {
-            name:'菜单1',
-            id:0
+        iTem: {
+            name:'无',
+            id:null
         },
-        navid: 0,
+        navid: null,
         addList:[],
         genre: 'left'
     },

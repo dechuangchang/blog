@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { oNavClickId } from '../../../js/actions/index';
 const mapStateToProps = (state, ownProps) => {
-    console.log(state.navid)
+    // console.log(state.navid)
+    $('.header-nav .list').stop();
     for (let o = 0; o < state.navid.addList.length; o++) {
         if (state.navid.addList[o].id == state.navid.navid) {
-            console.log(o)
+            // console.log(o)
             if (o == 0) {
                 $('.header-nav .list').animate({ 'scrollLeft': 0 + 'px' })
             } else {
@@ -15,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
                     num += $('.header-nav .list .item').eq(i).outerWidth(true);
                     // console.log($('.header-nav .list .item').eq(i).outerWidth(true))
                     if (o - i === 1) {
-                        console.log(num)
+                        // console.log(num)
                         $('.header-nav .list').animate({ 'scrollLeft': num + 'px' })
                     }
                 }
@@ -47,7 +48,7 @@ class App extends React.Component {
                 if (i <= 0) {
                     oNavClickId(addList[0], 'top')
                 } else {
-                    console.log(i)
+                    // console.log(i)
                     oNavClickId(addList[i - 1], 'top')
                 }
             }
@@ -62,19 +63,12 @@ class App extends React.Component {
                 if (i >= addList.length-1) {
                     oNavClickId(addList[addList.length-1], 'top')
                 } else {
-                    console.log(i)
+                    // console.log(i)
                     oNavClickId(addList[i + 1], 'top')
                 }
             }
             // 
         }
-        // let { oNavClickId, navId, clazzName ,state} = this.props;
-        // console.log(navId.navid)
-        // if (state.addList.length >= $('.header-nav .list .item').length - 1) {
-        //     oNavClickId($('.header-nav .list .item').length,this.state, 'top')
-        // } else {
-        //     oNavClickId(navId.navid + 1,this.state, 'top')
-        // }
 
     }
     componentDidMount() {

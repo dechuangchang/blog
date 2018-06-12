@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {oNavClickId} from '../../../js/actions/index';
 const mapStateToProps = (state, ownProps) => {
-    console.log(state)
+    // console.log(state)
     return {
         iTem: state.navid.iTem,
         navid:state.navid.navid
