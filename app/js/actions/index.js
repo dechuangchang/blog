@@ -1,4 +1,4 @@
-import {NAVSHOW, GETUSER } from '../constants/index';
+import {NAVSHOW, GETUSER ,NAVID} from '../constants/index';
 
 export const oNavShow = (otype) => {
     return {
@@ -6,6 +6,15 @@ export const oNavShow = (otype) => {
     }
 }
 
+export const oNavClickId = (item,genre) => {
+    // console.log(navid,state,genre)
+    return {
+        type:NAVID,
+        item:item,
+        genre:genre,
+        show:true
+    }
+}
 
 export const getUser = () => {
     return {

@@ -1,12 +1,12 @@
-import '../../less/index.less';
+import '../../less/admin.less';
 import {
     HashRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
-import Home from './home/main.js';
-import Router1 from './router1/main.js';
-import Router2 from './router2/main.js'
+import Nav from './nav/main.js';
+import HeaderNav from './headerNav/main.js';
+
 class App extends React.Component {
     constructor(props) {
         super(props)
@@ -16,16 +16,12 @@ class App extends React.Component {
     }
     render() {
         return (
-            <Router>
-                
-                <div>
-                    <div>hello</div>
-                    
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/router1/:name?" component={Router1} />
-                    <Route exact path="/router2" component={Router2} />
+            <div className='box'>
+                <Nav/>
+                <div className='content'>
+                    <HeaderNav clazzName='header-nav'/>
                 </div>
-            </Router>
+            </div>
         )
     }
 }
